@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 02</title>
+</head>
+<body>
+    <h1 id="titulo"></h1>
+    <button onclick="ejemploifTernario()">Ejemplo If Ternario</button>
+
+    <script>        
+        function ejemploifTernario(){
+            let fecha = new Date();
+            let hoy = fecha.getDay();
+
+            var diaDeLaSemana = (hoy === 3) ? "Miércoles" : 'Hoy no es Miércoles';
+            document.getElementById('titulo').innerHTML = diaDeLaSemana;
+        }
+        
+    </script>
+</body>
+</html>
