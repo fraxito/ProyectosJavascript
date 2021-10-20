@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <style>
+        .caja{
+            position: absolute;
+            background-color: #FE0;
+            width: 64px;
+            height: 64px;
+        }
+    </style>
+</head>
+<body>
+    <div class="caja"></div>
+
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script>
+        $(document).click(function(){
+            $(".caja").toggle('blind',{direction:'left'});
+        });
+    </script>
+</body>
+</html>

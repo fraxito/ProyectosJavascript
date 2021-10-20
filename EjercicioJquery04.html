@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .resaltado{
+            background-color: chocolate;
+            font-size: xx-large;
+        }
+
+        .resaltado2{
+            background-color: darkblue;
+            font-size: xx-small;
+        }       
+    </style>
+</head>
+<body>
+    
+    <input type="button" value="resaltado 1" onclick="resalta1()"/>
+    <input type="button" value="resaltado 2" onclick="resalta2()"/>
+    <ol>
+        <li>fila 01</li>
+        <li>fila 02</li>
+        <li>fila 03</li>
+        <li>fila 04</li>
+        <li>fila 05</li>
+        <li>fila 06</li>
+    </ol>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        function resalta1(){
+            $('li:even').removeClass('resaltado2').addClass('resaltado');
+            $('li:odd').removeClass('resaltado').addClass('resaltado2');
+        }
+
+        function resalta2(){
+            $('li:even').removeClass('resaltado').addClass('resaltado2');
+            $('li:odd').removeClass('resaltado2').addClass('resaltado');
+        }
+    </script>
+</body>
+</html>

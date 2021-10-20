@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="button" value="EJEMPLO jQUERY 03" onclick="ejemplo3()"/>
+    <ol>
+        <li>fila 01</li>
+        <li>fila 02</li>
+        <li>fila 03</li>
+        <li>fila 04</li>
+        <li>fila 05</li>
+        <li>fila 06</li>
+    </ol>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        function ejemplo3(){
+            $('li:even').css('background-color', '#FF0000');
+            $('li:odd').css('background-color', '#00FF00');
+        }
+    </script>
+</body>
+</html>
