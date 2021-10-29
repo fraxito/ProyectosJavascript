@@ -9,27 +9,41 @@
 
 </head>
 <body>
+    <input type="button" value="deshabilita tab 1" onclick="deshabilitaTab(2)"/>
     <div id="mistabs">
         <ul>
           <li><a href="#fragment-1">One</a></li>
           <li><a href="#fragment-2">Two</a></li>
           <li><a href="#fragment-3">Three</a></li>
+          <li><a href="#fragment-4">cuarto</a></li>
         </ul>
         <div id="fragment-1">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+            <img src="https://doodleipsum.com/700/avatar-5?i=14233881412636ca5abab7048a9d8668">
         </div>
         <div id="fragment-2">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+          <img src="https://api.lorem.space/image/game?w=150&h=220&t=1">
         </div>
         <div id="fragment-3">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+          <img src="https://api.lorem.space/image/game?w=150&h=220&t=2">
         </div>
+        <div id="fragment-4">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+            <img src="https://api.lorem.space/image/game?w=150&h=220&t=3">
+          </div>
       </div>
 
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script>
         $('#mistabs').tabs();
+
+        function deshabilitaTab(_numeroTab){
+            $('#mistabs').tabs({disabled: [0,3]});
+        }
+
     </script>
 </body>
 </html>

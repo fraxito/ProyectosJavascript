@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+</head>
+<body>
+    <div id="fecha"></div>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script>
+      $('#fecha').datepicker({
+        changeMonth: true,
+        changeYear: true,
+        yearRange: "-55:+55",
+        dateFormat: "D mm yy",
+        firstDay: 1,
+        currentText: "Hoy",
+        showButtonPanel: true,
+        monthNames: ['Enero','Febrero','Marzo','Abril','Mayo','Junio',
+            'Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],
+        monthNamesShort: ['Ene','Feb','Mar','Abr','May','Jun',
+            'Jul','Ago','Sep','Oct','Nov','Dic'],
+        dayNames: ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'],
+        dayNamesShort: ['Dom','Lun','Mar','Mié','Juv','Vie','Sáb'],
+        dayNamesMin: ['Do','Lu','Ma','Mi','Ju','Vi','Sa'],
+        weekHeader: 'Sm',
+        showWeek: true,
+        onSelect: function(){
+          var fecha = $('#fecha').datepicker('getDate');
+          alert(" DIA: "+ fecha.getDate() +
+                " MES: "+ (fecha.getMonth() + 1) +
+                " AÑO: "+ fecha.getFullYear()
+                ); //los meses empiezan en 0
+
+        }
+      });
+
+    </script>
+</body>
+</html>

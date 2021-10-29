@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+
+</head>
+<body>
+    <input type="button" value="alerta normal" onclick="alerta1()"/>
+    <input type="button" value="alerta JQueryUI" onclick="alerta2()"/>
+    
+    <div id="mialerta" title="esto es el título" >
+      aqui va el cuerpo del mensaje
+    </div>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script>
+
+function alerta1(){
+    alert('esto es un mensaje de alert normal');
+}
+
+function alerta2(){
+    $('#mialerta').dialog({
+      autoOpen : true,
+      modal:true,
+      classes:{
+        "ui-dialog": "highlight"
+      },
+      buttons:[{
+        icon: "ui-icon-heart",
+        text:"Ok",
+        click: function(){
+          $(this).dialog("close");
+        }
+      }]
+    });
+}
+
+    </script>
+</body>
+</html>
